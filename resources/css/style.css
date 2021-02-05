@@ -448,7 +448,7 @@ nav
     font-weight: 700;
 }
 
-@media (max-width:888px)
+@media (max-width:965px)
 {
     
     nav
@@ -483,10 +483,17 @@ nav
     {
         justify-content: center;
     }
+    .hero-image
+    {   
+        margin: 40px 0 0 0;
+        height: fit-content; 
+        max-width: 450px;
+    }
     .image-gallery
     {
         justify-content: center;
     }
+   
     .gallery
     {
         text-align: center;
@@ -507,12 +514,22 @@ nav
     {
         margin: 40px 0 0 0;
     }
+    .instagram
+    {
+        background: var(--primary-color);
+        filter: drop-shadow(0px 10px 10px rgba(0 ,0 ,0 ,0.1));
+        transform: scale(1);
+    } 
+    .dm_svg
+    {
+        display: none;
+    }
 }
 @media  (max-width:600px)
 {
     .wrapper
     {
-        padding:0 30px ;
+        padding:0 10px ;
     }
     .hamburger-menu
     {
@@ -521,7 +538,6 @@ nav
     .intro
     {
         max-width: 400px;
-
     }
     .intro-description h1
     {
@@ -533,9 +549,8 @@ nav
     }
     .hero-image
     {   
-         margin: 40px 0 0 0;
-        height: fit-content;
-        
+        margin: 40px 0 0 0;
+        height: fit-content; 
     }
    
     .gallery h2
@@ -579,16 +594,7 @@ nav
     {
         margin: 40px 0 0;
     }
-    .instagram
-    {
-        background: var(--primary-color);
-        filter: drop-shadow(0px 10px 10px rgba(0 ,0 ,0 ,0.1));
-        transform: scale(1);
-    } 
-    .dm_svg
-    {
-        display: none;
-    }
+   
     .footer-content
     {
         flex-flow: column-reverse wrap;
@@ -598,4 +604,55 @@ nav
         margin: 10px 0 0 0 ;
     }
 
+}
+@media (min-width:896px) and (max-width:965px)
+{
+  
+   .intro-description
+   {
+        transform: scale(.9);
+   }
+    .hero-image
+    {   
+        flex: 1;
+    }
+   
+    .image-gallery
+    {
+        margin: 50px 0 0 0;
+        flex-wrap: nowrap;
+    }
+    .gallery_item
+    {
+        max-width: 200px;
+        object-fit: inherit;
+    }
+}
+@media (min-width:966px) and (max-width:1155px)
+{
+    .image-gallery
+    {
+        margin: 50px 0 0 0;
+        flex-wrap: nowrap;
+    }
+    .gallery_item
+    {
+        flex: 1;
+    }
+    .about-me-content-section
+    {
+        flex-wrap: nowrap;
+    }
+    .about-me-content 
+    {
+        max-width: 400px;
+    }
+    .about-me-content > *
+    {
+        width: inherit;
+    }
+    .dm_svg
+    {
+        width: 30%;
+    }
 }
