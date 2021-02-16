@@ -339,8 +339,13 @@
    };
    image.forEach(element => {
         element.addEventListener("click",(element)=>{
-           const attribute = element.path[1].getAttribute("data-type");
-           show(attribute);
+            // const attribute = element.path[1].getAttribute("data-type");
+            // show(attribute);
+            // console.log(attribute);
+           const attribute = element.composedPath();
+           const attributeObject = {...[attribute]};
+          const attributeDataType = attributeObject [0][1].dataset.type;
+           show(attributeDataType);
         });
    });
    function show(attribute)
