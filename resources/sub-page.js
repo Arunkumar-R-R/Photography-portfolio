@@ -25,18 +25,17 @@ items.forEach(element => {
         image.setAttribute("src",currentItem.src);
         image.classList.add("modal_img");
         modal.appendChild(image);
-        var close_btn = document.createElement("div"); 
-        close_btn.innerHTML = ` <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40" fill="#FFDA77"/>
-                            <path d="M25 25C30.6937 30.918 35.4244 35.7747 39.3192 39.7273M39.3192 39.7273C49.4965 50.0555 53.9668 54.211 55 55L39.3192 39.7273ZM39.3192 39.7273L55 25M39.3192 39.7273L25 55" stroke="#3E3E3E" stroke-width="4"/>
-                            </svg>`;
-        modal.appendChild(close_btn);
-        body.insertAdjacentElement('beforebegin', modal);
+        body.insertAdjacentElement('afterbegin', modal);
         body.style.overflow = "hidden";
-        close_btn.addEventListener("click",()=>{
-             modal.parentNode.removeChild(modal);
-             body.style.overflow = "auto";
-        })                   
+        modal.addEventListener("click",(e)=>{
+            let modal_img = document.querySelector(".modal_img");
+            if(e.target!=modal_img)
+            {
+                modal.parentNode.removeChild(modal);
+                body.style.overflow = "auto";
+            }
+        }) 
+
     });
 });
 items.forEach(element => {

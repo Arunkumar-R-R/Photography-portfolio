@@ -18,7 +18,7 @@
 }
 body
 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--text-color);
 }
 h1
@@ -105,9 +105,9 @@ nav
 }
 .item img
 {
-    -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .item:nth-of-type(1)
@@ -146,8 +146,6 @@ nav
 0%{
     -webkit-transform: scale(.1);
             transform: scale(.1);
-    -webkit-transform: translateY(250px);
-            transform: translateY(250px);
     opacity: .0;
 }
 
@@ -161,10 +159,8 @@ nav
 @keyframes stretch
 {
 0%{
-    -webkit-transform: scale(.1);
-            transform: scale(.1);
-    -webkit-transform: translateY(250px);
-            transform: translateY(250px);
+    -webkit-transform: scale(.9);
+            transform: scale(.9 );
     opacity: .0;
 }
 
@@ -175,7 +171,7 @@ nav
 }
 }
 
-img
+ img.image
 {
     width: 100%;
     height: 100%;
@@ -184,7 +180,7 @@ img
     -webkit-transition-duration: .35s;
          -o-transition-duration: .35s;
             transition-duration: .35s;
-}
+} 
 footer
 {
     padding: 40px 0;
@@ -206,7 +202,9 @@ footer
     z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: hsla(180,53%,79%,.85);
+    margin: -8px;
+    padding: 0;
+    background-color: hsla(0, 0%, 40%, .8);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -221,15 +219,56 @@ footer
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
  }
+
  .modal_img
  {
-    width: 100%;
     height: 85vh;
     -o-object-fit: contain;
        object-fit: contain;
     margin:0 0 20px 0;
     opacity: 1;
+    -webkit-animation-name: modalanimi ;
+    animation-name: modalanimi ; 
+    -webkit-animation-duration: .13s; 
+    animation-duration: .13s;
+-webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; 
+-webkit-animation-direction: alternate; 
+    animation-direction: alternate;
+-webkit-animation-iteration-count: linear;
+    animation-iteration-count: linear;
  }
+
+
+ @-webkit-keyframes modalanimi
+ {
+ 0%{
+     -webkit-transform: scale(.1);
+             transform: scale(.1);
+     opacity: .0;
+ }
+ 
+ 100% {
+     -webkit-transform: scale(1);
+             transform: scale(1);
+     opacity: 1;
+ }
+ }
+ @keyframes modalanimi
+ {
+ 0%{
+     -webkit-transform: scale(.1);
+             transform: scale(.1);
+     opacity: .0;
+ }
+ 
+ 100% {
+     -webkit-transform: scale(1);
+             transform: scale(1);
+     opacity: 1;
+ }
+ }
+
  @media( max-width:655px)
 {
     .item
