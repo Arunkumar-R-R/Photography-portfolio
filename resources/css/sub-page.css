@@ -16,10 +16,7 @@
     --font-size-8:0.875rem;
     --shadow-1:drop-shadow(0px 10px 10px rgba(0 ,0 ,0 ,0.1));
 }
-html
-{
-    scroll-behavior: smooth;
-}
+
 body
 {
     font-family: 'Poppins', sans-serif;
