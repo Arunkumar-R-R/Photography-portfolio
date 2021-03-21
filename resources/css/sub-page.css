@@ -281,6 +281,8 @@ footer
     .modal_img
     {
         width: 90%;
+        height: fit-content;
+        outline: solid;
         margin: 0 0 10px 0 ;
     }  
      nav{
