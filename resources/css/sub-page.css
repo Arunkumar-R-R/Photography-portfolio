@@ -37,8 +37,8 @@ nav
     padding: 50px 0;
     -webkit-animation-name: animi ;
             animation-name: animi ; 
-    -webkit-animation-duration: .5s; 
-            animation-duration: .5s;
+    -webkit-animation-duration: .3s; 
+            animation-duration: .3s;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out; 
     -webkit-animation-direction: alternate; 
@@ -49,8 +49,8 @@ nav
 @-webkit-keyframes animi
 {
     0%{
-        -webkit-transform: translateY(150px);
-                transform: translateY(150px);
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
         opacity: 0;
     }
     50%
@@ -64,8 +64,8 @@ nav
 @keyframes animi
 {
     0%{
-        -webkit-transform: translateY(150px);
-                transform: translateY(150px);
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
         opacity: 0;
     }
     50%
@@ -94,8 +94,9 @@ nav
     min-width: 125px;
     
     -webkit-animation-name: stretch ;
-    
             animation-name: stretch ; 
+            -webkit-animation-duration: .6s;
+            animation-duration: .6s;
     -webkit-animation-timing-function: ease-in; 
             animation-timing-function: ease-in; 
     -webkit-animation-direction: alternate; 
@@ -111,7 +112,7 @@ nav
             transform: scale(1.1);
 }
 
-.item:nth-of-type(1)
+/* .item:nth-of-type(1)
 {
     -webkit-animation-duration: .6s;
             animation-duration: .6s;
@@ -140,7 +141,7 @@ nav
 {
     -webkit-animation-duration: 1.1s;
             animation-duration: 1.1s;
-}
+} */
 
 @-webkit-keyframes stretch
 {
